@@ -24,19 +24,24 @@ body {
 .navbar-light .navbar-nav .nav-link {
     color: #333;
     font-weight: 500;
+    transition: color 0.3s;
 }
 .navbar-light .navbar-nav .nav-link:hover {
     color: #4CAF50; /* Zelený hover efekt */
 }
+.navbar-light .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #388E3C !important;
+}
 
-/* --- Pätička (footer) --- */
+/* --- Pätička (footer) - JEDNOTNÁ PÄTIČKA --- */
 footer.bg-success {
     background-color: #4CAF50 !important; /* Jednotná zelená farba */
     border-top: 4px solid #FFC107; /* Zlato-žltý pásik navrchu */
 }
 
 footer a.text-warning {
-    color: #FFEB3B !important; /* Svetlejšia žltá pre lepší kontrast v pätičke */
+    color: #FFEB3B !important; /* Svetlejšia žltá pre lepší kontrast */
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -45,13 +50,7 @@ footer a.text-warning:hover {
 }
 
 /* --- Tabuľky --- */
-/* Vylepšenie kontrastu hlavičky tabuľky */
 .table-success th {
-    background-color: #388E3C !important; /* Tmavšia zelená */
-}
-
-/* --- Tlačidlá --- */
-.btn-warning {
-    /* Zabezpečenie kontrastu textu na tlačidle */
-    color: #333 !important;
+    background-color: #388E3C !important;
+    color: #fff;
 }
