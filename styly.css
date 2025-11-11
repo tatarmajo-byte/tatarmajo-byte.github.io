@@ -1,32 +1,20 @@
-/* Vlastné doplnkové štýly */
 body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
-.hero-section {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url("https://cdn.pixabay.com/photo/2017/03/07/20/10/avocado-2127686_1280.jpg") center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.hero-section h1, .hero-section p {
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-}
-
-.list-group-item:hover {
-  background-color: #e8f5e9;
-  transition: 0.3s;
-}
-
-table caption {
-  caption-side: bottom;
-  font-size: 0.9rem;
-  margin-top: 5px;
+h1, h2, h3 {
+  font-weight: 700;
 }
 
 footer {
-  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+.btn-success:hover {
+  background-color: #1b5e20 !important;
 }
