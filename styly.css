@@ -1,56 +1,166 @@
-/* Vlastný CSS pre E-shop Zdravá Špajza */
+/* 🌿 Moderný a svieži štýl pre e-shop Zdravá Špajza */
 
-/* --- Základné nastavenie pre prístupnosť a čitateľnosť --- */
+/* --- Základné nastavenie --- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333; /* Tmavá farba textu pre dobrý kontrast (WCAG) */
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafdf8;
+    color: #2f3e34;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
 }
 
-/* --- Hero Sekcia (index.html) --- */
-.custom-hero {
-    background-color: #4CAF50; /* Základná zelená */
-    background-image: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
-    padding: 3rem !important; 
-    color: #fff;
-    border-radius: 1rem !important;
+/* --- Navigácia (Menu) --- */
+.navbar {
+    background: #ffffff !important;
+    border-bottom: 2px solid #e3f2e1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* --- Navbar (Menu) --- */
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #3a7a3f !important;
+    letter-spacing: 0.5px;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #333;
+    color: #3d3d3d;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
 }
+
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #4CAF50; /* Zelený hover efekt */
+    color: #4CAF50;
+    transform: translateY(-1px);
 }
+
 .navbar-light .navbar-nav .nav-link.active {
-    font-weight: bold;
-    color: #388E3C !important;
+    color: #2e7d32 !important;
+    font-weight: 600;
 }
 
-/* --- Pätička (footer) - JEDNOTNÁ PÄTIČKA --- */
-footer.bg-success {
-    background-color: #4CAF50 !important; /* Jednotná zelená farba */
-    border-top: 4px solid #FFC107; /* Zlato-žltý pásik navrchu */
+/* --- Hero sekcia --- */
+.custom-hero {
+    background: linear-gradient(135deg, #8bc34a 0%, #aed581 100%);
+    color: #fff;
+    border-radius: 1.5rem !important;
+    text-align: center;
+    padding: 4rem 2rem !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-footer a.text-warning {
-    color: #FFEB3B !important; /* Svetlejšia žltá pre lepší kontrast */
-    text-decoration: none;
-    transition: color 0.3s;
+.custom-hero h1 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-footer a.text-warning:hover {
-    color: #fff !important;
+
+.custom-hero p {
+    font-size: 1.25rem;
+    opacity: 0.95;
+}
+
+/* --- Sekcie a nadpisy --- */
+h2 {
+    font-weight: 700;
+    color: #388e3c;
+    border-left: 6px solid #8bc34a;
+    padding-left: 10px;
+    margin-bottom: 1rem;
+}
+
+/* --- Zoznam kategórií --- */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #e8f5e9;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f1f8e9;
+    transform: translateX(3px);
 }
 
 /* --- Tabuľky --- */
-.table-success th {
-    background-color: #388E3C !important;
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+    background-color: #66bb6a !important;
     color: #fff;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f8e9;
+    transition: background-color 0.3s ease;
+}
+
+caption {
+    caption-side: bottom;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Pätička --- */
+footer {
+    background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%) !important;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #fff176 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+/* --- Obrázky --- */
+img.rounded-3 {
+    border-radius: 1.5rem !important;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img.rounded-3:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Responsivita --- */
+@media (max-width: 768px) {
+    .custom-hero {
+        padding: 2.5rem 1.5rem !important;
+    }
+
+    h1.display-4 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 0.95rem;
+    }
+}
+
+/* --- Animácie pre jemný pocit života --- */
+a, button, .list-group-item {
+    transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
 }
