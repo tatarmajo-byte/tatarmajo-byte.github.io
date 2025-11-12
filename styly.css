@@ -52,12 +52,14 @@ body {
 
 .custom-hero h1 {
     font-weight: 700;
+    color: #388e3c;
     margin-bottom: 1rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .custom-hero p {
     font-size: 1.25rem;
+    color: #388e3c;
     opacity: 0.95;
 }
 
@@ -164,3 +166,4 @@ a, button, .list-group-item {
 html {
     scroll-behavior: smooth;
 }
+
