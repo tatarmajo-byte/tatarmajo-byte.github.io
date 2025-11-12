@@ -20,28 +20,81 @@
   </header>
 
   <main>
-    <h2>Vyplňte krátky formulár</h2>
+    <h2>Vyplňte krátky dotazník o zdravej strave</h2>
+
     <form>
-      <label for="meno">Meno:</label><br>
+      <!-- Meno a priezvisko -->
+      <label for="meno">Meno a priezvisko:</label><br>
       <input type="text" id="meno" name="meno" required><br><br>
 
+      <!-- Email -->
       <label for="email">Email:</label><br>
       <input type="email" id="email" name="email" required><br><br>
 
-      <label for="vek">Vek:</label><br>
-      <input type="number" id="vek" name="vek" required><br><br>
+      <!-- Telefón -->
+      <label for="telefon">Telefón:</label><br>
+      <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="napr. 0912345678" required><br><br>
 
-      <label for="oblubene">Obľúbený produkt:</label><br>
-      <select id="oblubene" name="oblubene">
-        <option value="avokado">Avokádo</option>
-        <option value="orechy">Orechy</option>
-        <option value="bio">Bio potraviny</option>
+      <!-- Mesto -->
+      <label for="mesto">Mesto:</label><br>
+      <input type="text" id="mesto" name="mesto" required><br><br>
+
+      <!-- PSČ -->
+      <label for="psc">PSČ:</label><br>
+      <input type="text" id="psc" name="psc" pattern="[0-9]{5}" placeholder="napr. 82101" required><br><br>
+
+      <!-- Ako často nakupujete -->
+      <label for="frekvencia">Ako často nakupujete zdravé potraviny?</label><br>
+      <select id="frekvencia" name="frekvencia">
+        <option value="casto">Pravidelne (viackrát týždenne)</option>
+        <option value="obcas">Občas (raz za týždeň)</option>
+        <option value="zriedka">Zriedkavo</option>
       </select><br><br>
 
-      <input type="checkbox" id="suhlas" name="suhlas" required>
-      <label for="suhlas">Súhlasím so spracovaním údajov</label><br><br>
+      <!-- Obľúbené kategórie -->
+      <p>Obľúbené kategórie produktov (môžete vybrať viac možností):</p>
+      <input type="checkbox" id="ovocie" name="kategoria" value="ovocie">
+      <label for="ovocie">Ovocie a zelenina</label><br>
 
-      <input type="submit" value="Odoslať">
+      <input type="checkbox" id="orechy" name="kategoria" value="orechy">
+      <label for="orechy">Orechy a semienka</label><br>
+
+      <input type="checkbox" id="bio" name="kategoria" value="bio">
+      <label for="bio">Bio produkty</label><br>
+
+      <input type="checkbox" id="napoje" name="kategoria" value="napoje">
+      <label for="napoje">Zdravé nápoje</label><br><br>
+
+      <!-- Úroveň zdravého života -->
+      <label for="zivot">Ako hodnotíte svoju úroveň zdravého životného štýlu (1–10):</label><br>
+      <input type="range" id="zivot" name="zivot" min="1" max="10" value="5"><br><br>
+
+      <!-- Používateľské meno -->
+      <label for="username">Používateľské meno:</label><br>
+      <input type="text" id="username" name="username" pattern="[A-Za-z0-9_]{5,15}" placeholder="min. 5 znakov" required><br><br>
+
+      <!-- Zľavový kód -->
+      <label for="zlavovy">Zľavový kód:</label><br>
+      <input type="text" id="zlavovy" name="zlavovy" pattern="[A-Z0-9]{6}" placeholder="napr. AVOKAD10" required><br><br>
+
+      <!-- Blog / web -->
+      <label for="blog">Váš blog alebo stránka o výžive:</label><br>
+      <input type="url" id="blog" name="blog" pattern="https?://.+" placeholder="napr. https://mojzdravyzivot.sk"><br><br>
+
+      <!-- Farba -->
+      <label for="farba">Obľúbená farba obalu produktu:</label><br>
+      <input type="color" id="farba" name="farba" required><br><br>
+
+      <!-- Vlastné pole -->
+      <label for="vernost">Kód vernostnej karty:</label><br>
+      <input type="text" id="vernost" name="vernost" pattern="[A-Z]{2}[0-9]{4}" placeholder="napr. AV1234"><br><br>
+
+      <!-- Súhlas -->
+      <input type="checkbox" id="suhlas" name="suhlas" required>
+      <label for="suhlas">Súhlasím so spracovaním osobných údajov.</label><br><br>
+
+      <!-- Odoslať -->
+      <input type="submit" value="Odoslať anketu">
     </form>
   </main>
 
@@ -51,4 +104,3 @@
 
 </body>
 </html>
-
