@@ -4,65 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avokádo – Eshop pre zdravú stravu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styly.css">
 </head>
 <body>
 
-  <header>
-    <h1>🥑 Avokádo – Eshop pre zdravú stravu</h1>
-    <nav>
-      <a href="index.html">Domov</a>
-      <a href="onas.html">O nás</a>
-      <a href="clanok1.html">Raňajky</a>
-      <a href="clanok2.html">Poradenstvo</a>
-      <a href="anketa.html">Anketa</a>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🥑 Avokádo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Domov</a></li>
+          <li class="nav-item"><a class="nav-link" href="onas.html">O nás</a></li>
+          <li class="nav-item"><a class="nav-link" href="clanok1.html">Raňajky</a></li>
+          <li class="nav-item"><a class="nav-link" href="clanok2.html">Poradenstvo</a></li>
+          <li class="nav-item"><a class="nav-link" href="anketa.html">Anketa</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero sekcia -->
+  <header class="text-center text-white py-5 hero">
+    <div class="container">
+      <h1 class="fw-bold">Zdravé potraviny, ktoré dávajú zmysel 🍃</h1>
+      <p class="lead">Objavte čerstvé, chutné a výživné produkty pre zdravší život.</p>
+      <a href="anketa.html" class="btn btn-light btn-lg mt-3">Vyplniť anketu</a>
+    </div>
   </header>
 
-  <main>
-    <section class="uvod">
-      <h2>Vitajte v Avokáde!</h2>
-      <p>Objavte zdravé potraviny, ktoré chutia aj prospievajú. Naša ponuka je čerstvá, prírodná a ekologická.</p>
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/09/16/avocado-1865877_1280.jpg" alt="Avokádo" class="obrazok">
-    </section>
+  <!-- Ponuka -->
+  <section class="container py-5">
+    <h2 class="text-success mb-3">Naša ponuka</h2>
+    <p>V Avokáde nájdete všetko pre zdravý životný štýl – od bio ovocia po superpotraviny.</p>
+    <ul>
+      <li>Čerstvé ovocie a zelenina</li>
+      <li>Orechy, semienka a sušené plody</li>
+      <li>Bezlepkové a bio výrobky</li>
+      <li>Zdravé nápoje a doplnky výživy</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Naša ponuka</h2>
-      <ul>
-        <li>Čerstvé ovocie a zelenina</li>
-        <li>Orechy a semienka</li>
-        <li>Bio produkty</li>
-        <li>Zdravé nápoje</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Kategórie produktov</h2>
-      <table>
-        <caption>Prehľad kategórií</caption>
+  <!-- Tabuľka -->
+  <section class="container pb-5">
+    <h2 class="text-success mb-3">Prehľad kategórií</h2>
+    <table class="table table-bordered table-striped">
+      <caption>Hlavné kategórie produktov</caption>
+      <thead class="table-success">
         <tr>
           <th>Kategória</th>
           <th>Popis</th>
         </tr>
-        <tr>
-          <td>Superpotraviny</td>
-          <td>Plné vitamínov a minerálov.</td>
-        </tr>
-        <tr>
-          <td>Orechy</td>
-          <td>Zdravé tuky a bielkoviny.</td>
-        </tr>
-        <tr>
-          <td>Bio produkty</td>
-          <td>Bez chémie, v súlade s prírodou.</td>
-        </tr>
-      </table>
-    </section>
-  </main>
+      </thead>
+      <tbody>
+        <tr><td>Superpotraviny</td><td>Vysoký obsah vitamínov a minerálov.</td></tr>
+        <tr><td>Orechy</td><td>Zdravé tuky a bielkoviny.</td></tr>
+        <tr><td>Bio produkty</td><td>Bez chémie, v súlade s prírodou.</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-  <footer>
+  <footer class="bg-success text-white text-center py-3">
     © 2025 Avokádo – Eshop pre zdravú stravu
-  </footer>
 
-</body>
-</html>
