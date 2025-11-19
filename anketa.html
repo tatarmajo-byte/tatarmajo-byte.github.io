@@ -4,103 +4,135 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anketa – Avokádo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styly.css">
 </head>
 <body>
 
-  <header>
+  <header class="bg-success text-white text-center py-3 mb-4">
     <h1>Anketa zákazníkov</h1>
     <nav>
-      <a href="index.html">Domov</a>
-      <a href="onas.html">O nás</a>
-      <a href="clanok1.html">Raňajky</a>
-      <a href="clanok2.html">Poradenstvo</a>
-      <a href="anketa.html">Anketa</a>
+      <a class="text-white me-3" href="index.html">Domov</a>
+      <a class="text-white me-3" href="onas.html">O nás</a>
+      <a class="text-white me-3" href="clanok1.html">Raňajky</a>
+      <a class="text-white me-3" href="clanok2.html">Poradenstvo</a>
+      <a class="text-white" href="anketa.html">Anketa</a>
     </nav>
   </header>
 
-  <main>
-    <h2>Vyplňte krátky dotazník o zdravej strave</h2>
-
+  <main class="container">
     <form>
       <!-- Meno a priezvisko -->
-      <label for="meno">Meno a priezvisko:</label><br>
-      <input type="text" id="meno" name="meno" required><br><br>
+      <div class="mb-3">
+        <label for="meno" class="form-label">Meno a priezvisko:</label>
+        <input type="text" id="meno" class="form-control" name="meno" required>
+      </div>
 
       <!-- Email -->
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" class="form-control" name="email" required>
+      </div>
 
       <!-- Telefón -->
-      <label for="telefon">Telefón:</label><br>
-      <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" placeholder="napr. 0912345678" required><br><br>
+      <div class="mb-3">
+        <label for="telefon" class="form-label">Telefón:</label>
+        <input type="tel" id="telefon" class="form-control" name="telefon" pattern="[0-9]{9}" placeholder="0912345678" required>
+      </div>
 
       <!-- Mesto -->
-      <label for="mesto">Mesto:</label><br>
-      <input type="text" id="mesto" name="mesto" required><br><br>
+      <div class="mb-3">
+        <label for="mesto" class="form-label">Mesto:</label>
+        <input type="text" id="mesto" class="form-control" name="mesto" required>
+      </div>
 
       <!-- PSČ -->
-      <label for="psc">PSČ:</label><br>
-      <input type="text" id="psc" name="psc" pattern="[0-9]{5}" placeholder="napr. 82101" required><br><br>
+      <div class="mb-3">
+        <label for="psc" class="form-label">PSČ:</label>
+        <input type="text" id="psc" class="form-control" name="psc" pattern="[0-9]{5}" placeholder="82101" required>
+      </div>
 
       <!-- Ako často nakupujete -->
-      <label for="frekvencia">Ako často nakupujete zdravé potraviny?</label><br>
-      <select id="frekvencia" name="frekvencia">
-        <option value="casto">Pravidelne (viackrát týždenne)</option>
-        <option value="obcas">Občas (raz za týždeň)</option>
-        <option value="zriedka">Zriedkavo</option>
-      </select><br><br>
+      <div class="mb-3">
+        <label for="frekvencia" class="form-label">Ako často nakupujete zdravé potraviny?</label>
+        <select id="frekvencia" class="form-select" name="frekvencia">
+          <option value="casto">Pravidelne</option>
+          <option value="obcas">Občas</option>
+          <option value="zriedka">Zriedkavo</option>
+        </select>
+      </div>
 
       <!-- Obľúbené kategórie -->
-      <p>Obľúbené kategórie produktov (môžete vybrať viac možností):</p>
-      <input type="checkbox" id="ovocie" name="kategoria" value="ovocie">
-      <label for="ovocie">Ovocie a zelenina</label><br>
-
-      <input type="checkbox" id="orechy" name="kategoria" value="orechy">
-      <label for="orechy">Orechy a semienka</label><br>
-
-      <input type="checkbox" id="bio" name="kategoria" value="bio">
-      <label for="bio">Bio produkty</label><br>
-
-      <input type="checkbox" id="napoje" name="kategoria" value="napoje">
-      <label for="napoje">Zdravé nápoje</label><br><br>
+      <div class="mb-3">
+        <label class="form-label">Obľúbené kategórie produktov:</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="ovocie" name="kategoria" value="ovocie">
+          <label class="form-check-label" for="ovocie">Ovocie a zelenina</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="orechy" name="kategoria" value="orechy">
+          <label class="form-check-label" for="orechy">Orechy a semienka</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="bio" name="kategoria" value="bio">
+          <label class="form-check-label" for="bio">Bio produkty</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="napoje" name="kategoria" value="napoje">
+          <label class="form-check-label" for="napoje">Zdravé nápoje</label>
+        </div>
+      </div>
 
       <!-- Úroveň zdravého života -->
-      <label for="zivot">Ako hodnotíte svoju úroveň zdravého životného štýlu (1–10):</label><br>
-      <input type="range" id="zivot" name="zivot" min="1" max="10" value="5"><br><br>
+      <div class="mb-3">
+        <label for="zivot" class="form-label">Úroveň zdravého života (1–10):</label>
+        <input type="range" class="form-range" id="zivot" name="zivot" min="1" max="10" value="5">
+      </div>
 
       <!-- Používateľské meno -->
-      <label for="username">Používateľské meno:</label><br>
-      <input type="text" id="username" name="username" pattern="[A-Za-z0-9_]{5,15}" placeholder="min. 5 znakov" required><br><br>
+      <div class="mb-3">
+        <label for="username" class="form-label">Používateľské meno:</label>
+        <input type="text" class="form-control" id="username" name="username" pattern="[A-Za-z0-9_]{5,15}" placeholder="min. 5 znakov" required>
+      </div>
 
       <!-- Zľavový kód -->
-      <label for="zlavovy">Zľavový kód:</label><br>
-      <input type="text" id="zlavovy" name="zlavovy" pattern="[A-Z0-9]{6}" placeholder="napr. AVOKAD10" required><br><br>
+      <div class="mb-3">
+        <label for="zlavovy" class="form-label">Zľavový kód:</label>
+        <input type="text" class="form-control" id="zlavovy" name="zlavovy" pattern="[A-Z0-9]{6}" placeholder="napr. AVOKAD10" required>
+      </div>
 
       <!-- Blog / web -->
-      <label for="blog">Váš blog alebo stránka o výžive:</label><br>
-      <input type="url" id="blog" name="blog" pattern="https?://.+" placeholder="napr. https://mojzdravyzivot.sk"><br><br>
+      <div class="mb-3">
+        <label for="blog" class="form-label">Váš blog alebo stránka o výžive:</label>
+        <input type="url" class="form-control" id="blog" name="blog" pattern="https?://.+" placeholder="napr. https://mojzdravyzivot.sk">
+      </div>
 
       <!-- Farba -->
-      <label for="farba">Obľúbená farba obalu produktu:</label><br>
-      <input type="color" id="farba" name="farba" required><br><br>
+      <div class="mb-3">
+        <label for="farba" class="form-label">Obľúbená farba obalu produktu:</label>
+        <input type="color" class="form-control form-control-color" id="farba" name="farba" required>
+      </div>
 
       <!-- Vlastné pole -->
-      <label for="vernost">Kód vernostnej karty:</label><br>
-      <input type="text" id="vernost" name="vernost" pattern="[A-Z]{2}[0-9]{4}" placeholder="napr. AV1234"><br><br>
+      <div class="mb-3">
+        <label for="vernost" class="form-label">Kód vernostnej karty:</label>
+        <input type="text" class="form-control" id="vernost" name="vernost" pattern="[A-Z]{2}[0-9]{4}" placeholder="napr. AV1234">
+      </div>
 
       <!-- Súhlas -->
-      <input type="checkbox" id="suhlas" name="suhlas" required>
-      <label for="suhlas">Súhlasím so spracovaním osobných údajov.</label><br><br>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="suhlas" name="suhlas" required>
+        <label class="form-check-label" for="suhlas">Súhlasím so spracovaním osobných údajov.</label>
+      </div>
 
-      <!-- Odoslať -->
-      <input type="submit" value="Odoslať anketu">
+      <button type="submit" class="btn btn-success">Odoslať anketu</button>
     </form>
   </main>
 
-  <footer>
+  <footer class="bg-success text-white text-center py-3 mt-4">
     © 2025 Avokádo – Eshop pre zdravú stravu
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
