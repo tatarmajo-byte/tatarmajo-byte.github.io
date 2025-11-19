@@ -11,6 +11,25 @@ header {
   padding: 15px;
 }
 
+/* Hlavné nadpisy */
+h1 {
+  font-size: 2.5rem;        /* veľkosť písma */
+  color: #2E7D32;           /* tmavá zelená */
+  text-align: center;       /* zarovnanie na stred */
+  margin-bottom: 1rem;      /* spodný margin */
+  font-weight: bold;         /* tučný text */
+}
+
+/* Podnadpisy */
+h2 {
+  font-size: 1.8rem;        /* o niečo menšie ako h1 */
+  color: #388E3C;           /* stredne tmavá zelená */
+  margin-top: 1.5rem;       /* horný margin */
+  margin-bottom: 1rem;      /* spodný margin */
+  font-weight: 600;          /* polotučné */
+}
+ 
+
 nav {
   margin-top: 10px;
 }
@@ -59,3 +78,18 @@ table, th, td {
 th {
   background-color: #d6f5d6;
 }
+
+/* Hero obrázok na hlavnej stránke */
+.hero {
+  background: url('https://cdn.pixabay.com/photo/2016/11/29/09/16/avocado-1865877_1280.jpg') center/cover no-repeat;
+  min-height: 400px; /* výška hero sekcie */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Základné písmo pre celý web */
+body {
+  font-family: Arial, sans-serif;
+}
+
